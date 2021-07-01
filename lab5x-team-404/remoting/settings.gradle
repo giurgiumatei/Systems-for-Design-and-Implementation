@@ -1,0 +1,6 @@
+rootProject.name = 'remoting'
+include 'common'
+include 'common'
+include 'server'
+include 'client'
+

@@ -1,0 +1,18 @@
+<div *ngIf="gunProvider">
+  <h2>Gun Provider {{gunProvider.name}} details</h2>
+  <div>
+    <label>Name: </label> {{gunProvider.name}}
+    <input [(ngModel)]="gunProvider.name" placeholder="name">
+  </div>
+  <div>
+    <label>Speciality: </label> {{gunProvider.speciality}}
+    <input [(ngModel)]="gunProvider.speciality" placeholder="speciality">
+  </div>
+  <div>
+    <label>Reputation: </label> {{gunProvider.reputation}}
+    <input [(ngModel)]="gunProvider.reputation" placeholder="reputation">
+  </div>
+  <button (click)="goBack()">Back</button>
+  <button (click)="save()">Save</button>
+  <button (click)="delete()">Delete</button>
+</div>

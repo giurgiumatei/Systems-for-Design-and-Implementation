@@ -1,0 +1,13 @@
+
+<h2>Rentals</h2>
+<ol class="rentals">
+  <li *ngFor="let rental of rentals" [class.selected]="rental === selectedRental"
+      (click)="onSelect(rental)">
+    {{rental.clientName}} --- {{rental.gunTypeName}} --- {{rental.price}}
+  </li>
+</ol>
+<div>
+  <h3>Most Rented Gun Type:</h3>
+  {{mostRentedGunType.name}} --- {{mostRentedGunType.category}} --- {{mostRentedGunType.gunProviderName}}
+</div>
+<br>

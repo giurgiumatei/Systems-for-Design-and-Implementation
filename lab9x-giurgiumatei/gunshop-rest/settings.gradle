@@ -1,0 +1,5 @@
+rootProject.name = 'gunshop-rest'
+include 'catalog-core'
+include 'catalog-web'
+include 'catalog-client'
+

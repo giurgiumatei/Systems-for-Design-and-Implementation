@@ -1,0 +1,45 @@
+<div *ngIf="selectedClient">
+  <h2>
+    {{selectedClient.name | uppercase}} was selected
+  </h2>
+  <button (click)="goToDetail()">View Details</button>
+</div>
+
+
+<h2>Clients</h2>
+<nav class="navbar">
+  <input class="form-control" type="text" name="date" [(ngModel)]="date"
+          placeholder="Enter Date to filter by">
+  <button (click)="search()">
+    Filter</button>
+</nav>
+<ol class="clients">
+  <li *ngFor="let client of clients" [class.selected]="client === selectedClient"
+  (click)="onSelect(client)">
+    {{client.name}} --- {{client.dateOfBirth}}
+  </li>
+</ol>
+
+<button (click)="newClicked=true">
+  New Client
+</button>
+
+<div *ngIf="newClicked">
+  <div>
+    <label>Name:<input #nameInput/></label><br/>
+    <label>Date:<input #dateInput/></label><br/>
+    <label>Email:<input #emailInput/></label><br/>
+    <label>Username:<input #usernameInput/></label><br/>
+    <label>Password:<input #passwordInput/></label><br/>
+    <button (click)="saveClient(nameInput.value,dateInput.value,emailInput.value,usernameInput.value,passwordInput.value)">
+      Save</button>
+  </div>
+</div>
+
+
+<!--<h2>Clients</h2>-->
+<!--<ol>-->
+<!--  <li *ngFor="let client of clients">-->
+<!--    {{client.name}} -&#45;&#45; {{client.dateOfBirth}}-->
+<!--  </li>-->
+<!--</ol>-->

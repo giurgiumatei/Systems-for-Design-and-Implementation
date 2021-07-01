@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<providers>
+    <provider>
+        <id>1</id>
+        <name>provider1</name>
+        <speciality>spec1</speciality>
+        <reputation>5</reputation>
+    </provider>
+    <provider>
+        <id>2</id>
+        <name>provider2</name>
+        <speciality>spec2</speciality>
+        <reputation>7</reputation>
+    </provider>
+</providers>

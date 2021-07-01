@@ -1,0 +1,23 @@
+
+<form #rentalForm="ngForm" (ngSubmit)="saveRental(rentalForm);">
+  <div class="form-group">
+    <label for="clientName">Client's Name</label>
+    <select id="clientName" name="clientName" ngModel required class="form-control">
+      <option *ngFor="let clientName of clients" [value]="clientName">{{clientName}}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="gunTypeName">Gun Type's Name</label>
+    <select id="gunTypeName" name="gunTypeName" ngModel required class="form-control">
+      <option *ngFor="let gunTypeName of gunTypes" [value]="gunTypeName">{{gunTypeName}}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="price">Price</label>
+    <input type="text" name="price" ngModel required class="form-control" id="price" #price="ngModel">
+    <small class="form-text text-muted" *ngIf="price.touched && !price.valid">Please enter a price</small>
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="!rentalForm.valid">Submit</button>
+</form>
+

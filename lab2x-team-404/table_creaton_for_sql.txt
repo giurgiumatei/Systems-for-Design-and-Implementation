@@ -1,0 +1,29 @@
+create table clients
+(
+    id int primary key ,
+    name varchar(255),
+    dateOfBirth Date
+);
+
+create table gun_providers(
+    id int primary key,
+    name varchar(255),
+    speciality varchar(255),
+    reputation int
+);
+
+create table gun_types
+(
+    id int primary key ,
+    name varchar(255),
+    category varchar(255),
+    providerid int references gun_providers(id)
+);
+
+create table rentals
+(
+    clientId int references clients(id),
+    gunTypeId int references gun_types(id),
+    price int,
+    PRIMARY KEY (clientId,gunTypeId)
+);

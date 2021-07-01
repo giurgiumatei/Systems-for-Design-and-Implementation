@@ -1,0 +1,30 @@
+<div *ngIf="selectedGunProvider">
+  <h2>
+    {{selectedGunProvider.name | uppercase}} was selected
+  </h2>
+  <button (click)="goToDetail()">View Details</button>
+</div>
+
+
+<h2>Gun Providers</h2>
+<button (click)="sortClicked=!sortClicked">
+  Sort by Name
+</button>
+<div *ngIf="sortClicked === false">
+  <ol class="gunProviders">
+    <li *ngFor="let gunProvider of gunProviders" [class.selected]="gunProvider === selectedGunProvider"
+        (click)="onSelect(gunProvider)">
+      {{gunProvider.name}} --- {{gunProvider.speciality}} --- {{gunProvider.reputation}}
+    </li>
+  </ol>
+</div>
+<div *ngIf="sortClicked === true">
+  <ol class="gunProviders">
+    <li *ngFor="let gunProvider of gunProvidersSorted" [class.selected]="gunProvider === selectedGunProvider"
+        (click)="onSelect(gunProvider)">
+      {{gunProvider.name}} --- {{gunProvider.speciality}} --- {{gunProvider.reputation}}
+    </li>
+  </ol>
+</div>
+
+

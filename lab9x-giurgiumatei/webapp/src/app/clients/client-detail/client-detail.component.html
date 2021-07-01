@@ -1,0 +1,14 @@
+<div *ngIf="client">
+  <h2>Client {{client.name}} details</h2>
+  <div>
+    <label>Name: </label> {{client.name}}
+    <input [(ngModel)]="client.name" placeholder="name">
+  </div>
+  <div>
+    <label>Date of Birth: </label> {{client.dateOfBirth.join('-')}}
+    <input [(ngModel)]="date" placeholder="dateOfBirth">
+  </div>
+  <button (click)="goBack()">Back</button>
+  <button (click)="save()">Save</button>
+  <button (click)="delete()">Delete</button>
+</div>

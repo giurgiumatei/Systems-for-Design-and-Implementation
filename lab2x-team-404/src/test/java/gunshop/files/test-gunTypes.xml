@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<guntypes>
+    <gunType>
+        <id>1</id>
+        <name>Gun1</name>
+        <category>PISTOL</category>
+        <providerid>1</providerid>
+    </gunType>
+    <gunType>
+        <id>2</id>
+        <name>Gun2</name>
+        <category>LONG_GUN</category>
+        <providerid>2</providerid>
+    </gunType>
+</guntypes>

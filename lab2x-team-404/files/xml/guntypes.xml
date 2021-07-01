@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<guntypes>
+    <gunType>
+        <id>1</id>
+        <name>arma</name>
+        <category>tare</category>
+    </gunType>
+    <gunType>
+        <id>2</id>
+        <name>asdf</name>
+        <category>qwe</category>
+    </gunType>
+    <gunType>
+        <id>3</id>
+        <name>pistol</name>
+        <category>tare</category>
+    </gunType>
+    <gunType>
+        <id>4</id>
+        <name>best-gun</name>
+        <category>best</category>
+    </gunType>
+</guntypes>

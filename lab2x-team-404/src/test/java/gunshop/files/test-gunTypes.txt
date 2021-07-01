@@ -1,0 +1,2 @@
+1,Gun1,LONG_GUN,1
+2,Gun2,PISTOL,2

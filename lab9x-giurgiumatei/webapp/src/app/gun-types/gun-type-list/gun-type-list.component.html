@@ -1,0 +1,21 @@
+<div *ngIf="selectedGunType">
+  <h2>
+    {{selectedGunType.name | uppercase}} was selected
+  </h2>
+  <button (click)="goToDetail()">View Details</button>
+</div>
+
+
+<h2>Gun Types</h2>
+<nav class="navbar">
+  <input class="form-control" type="text" name="category" [(ngModel)]="category"
+         (ngModelChange)="search()" placeholder="Enter Category to filter by">
+</nav>
+<button  (click)="sortByName()">Sort by name</button>
+<ol class="gunTypes">
+  <li *ngFor="let gunType of gunTypes" [class.selected]="gunType === selectedGunType"
+      (click)="onSelect(gunType)">
+    {{gunType.name}} --- {{gunType.category}} --- {{gunType.gunProviderName}}
+  </li>
+</ol>
+

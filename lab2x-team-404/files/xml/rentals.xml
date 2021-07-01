@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rentals>
+    <rental>
+        <id>(3,4)</id>
+        <price>180</price>
+    </rental>
+    <rental>
+        <id>(2,3)</id>
+        <price>230</price>
+    </rental>
+    <rental>
+        <id>(1,1)</id>
+        <price>200</price>
+    </rental>
+</rentals>

@@ -1,0 +1,51 @@
+<h2>New Gun Provider</h2>
+<form #formDir="ngForm" [formGroup]="gunProviderForm">
+  <div [hidden]="formDir.submitted">
+
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input class="form-control" formControlName="name" id="name" required>
+      <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
+        <div *ngIf="name.errors.required">
+          Name is required.
+        </div>
+        <div *ngIf="name.errors.pattern">
+          Name must consist only of upper/lower-case letters.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="Speciality">Speciality</label>
+      <input class="form-control" formControlName="speciality" id="speciality" required>
+      <div *ngIf="speciality.invalid && (speciality.dirty || speciality.touched)" class="alert">
+        <div *ngIf="speciality.errors.required">
+          Speciality is required.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="reputation">Reputation</label>
+      <input class="form-control" formControlName="reputation" id="reputation" required>
+      <div *ngIf="reputation.invalid && (reputation.dirty || reputation.touched)" class="alert alert-danger">
+        <div *ngIf="reputation.errors.required">
+          Rating is required.
+        </div>
+        <div *ngIf="reputation.errors.min">
+          Rating must be greater or equal to 1.
+        </div>
+        <div *ngIf="reputation.errors.max">
+          Rating must be less or equal to 10.
+        </div>
+        <div *ngIf="reputation.errors.pattern">
+          Rating must consist only of digits.
+        </div>
+      </div>
+    </div>
+    <button (click)="saveGunProvider( name.value, speciality.value, reputation.value)" [disabled]="gunProviderForm.invalid" type="submit">
+      Submit
+    </button>
+  </div>
+</form>
+

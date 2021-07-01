@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<clients>
+    <client>
+        <id>1</id>
+        <name>Matei</name>
+        <dateOfBirth>30/9/2000</dateOfBirth>
+    </client>
+    <client>
+        <id>2</id>
+        <name>Andrei</name>
+        <dateOfBirth>21/5/2000</dateOfBirth>
+    </client>
+</clients>
